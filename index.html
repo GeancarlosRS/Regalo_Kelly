@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Para Kelly JT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================= INTRO ========================= -->
+  <section id="intro" class="screen active">
+    <div class="intro-card glass">
+      <div class="seed-stage" aria-hidden="true">
+        <div class="seed-halo"></div>
+        <div class="seed-art">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <p class="eyebrow">PARA KELLY JT</p>
+      <h1>Tengo algo preparado<br>para ti.</h1>
+      <p class="intro-sub">Pero tendrás que hacerlo crecer.</p>
+
+      <button id="startBtn" class="gold-btn" type="button">
+        Empezar <span>→</span>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- ========================= GROW ========================= -->
+  <section id="grow" class="screen">
+    <div class="grow-card glass">
+      <header class="grow-header">
+        <span>Hazlo crecer</span>
+        <strong id="growCount">0 / 10</strong>
+      </header>
+
+      <div id="growArea" class="grow-area">
+        <div class="soil"></div>
+        <div id="growthStage"></div>
+      </div>
+
+      <footer class="grow-footer">
+        <p id="growText">Algo empieza aquí.</p>
+        <button id="growBtn" class="gold-btn" type="button">
+          Hacer crecer <span>→</span>
+        </button>
+      </footer>
+    </div>
+  </section>
+
+
+  <!-- ========================= TRANSITION ========================= -->
+  <section id="transition" class="screen">
+    <div class="transition-box">
+      <p>Espera...</p>
+      <h2>Ahora viene la parte divertida.</h2>
+    </div>
+  </section>
+
+
+  <!-- ========================= INTERACTIVE PERFORMANCE ========================= -->
+  <section id="performance" class="screen performance-screen">
+
+    <div class="performance-bg" aria-hidden="true">
+      <div class="warm-glow"></div>
+      <span class="star st1">✦</span>
+      <span class="star st2">✧</span>
+      <span class="star st3">✦</span>
+      <span class="star st4">✧</span>
+      <span class="star st5">✦</span>
+      <span class="star st6">·</span>
+    </div>
+
+    <!-- HUD del minijuego -->
+    <div id="perfHud" class="perf-hud">
+      <div class="hud-line-one">
+        <span>Ayuda al monito</span>
+        <strong><span id="pickedCount">0</span>/<span id="totalCount">10</span></strong>
+      </div>
+      <div class="hud-line-two">
+        <span>Girasoles</span>
+        <span id="timeLeft">00:45</span>
+      </div>
+      <div class="hud-bar"><div id="pickedBar" class="picked-bar"></div></div>
+      <div class="hud-help">Toca o haz clic en cada girasol.</div>
+    </div>
+
+    <!-- Campo de flores -->
+    <div id="flowerField" class="flower-field"></div>
+
+    <!-- Mono -->
+    <div id="monkey" class="monkey" aria-hidden="true">
+      <div id="monkeyArt" class="monkey-art"></div>
+      <div id="armBouquet" class="arm-bouquet"></div>
+    </div>
+
+    <div id="musicBadge" class="music-badge hidden">♪</div>
+
+    <!-- Mensaje SOLO aparece cuando termina la música -->
+    <div id="finalText" class="final-text">
+      <p class="final-eyebrow">PARA MI KELLY JT</p>
+      <h2>Un ramo de girasoles <span>para mi bombón.</span></h2>
+      <p>Te amo bb ❤️</p>
+    </div>
+
+  </section>
+
+
+  <audio id="music" preload="auto">
+    <source src="audio/musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
