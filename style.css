@@ -941,9 +941,21 @@ button {
     transform-origin: bottom center;
   }
 
-  .bud {
-    transform: translateX(-50%) scale(.68);
+   .bud {
+    animation: growAppearMobile .9s ease both;
     transform-origin: bottom center;
+  }
+
+  @keyframes growAppearMobile {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(30px) scale(.50);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0) scale(.62);
+    }
   }
 
   .garden-flower {
