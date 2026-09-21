@@ -409,14 +409,15 @@ function startFinalScene() {
   startAudioContext();
   showScreen(transition);
 
-  /* Mantener el gesto del usuario para el audio. */
-  const playPromise = music.play().catch(() => null);
+  /* Preparar el audio sin que se escuche durante la transición. */
+  music.currentTime = MUSIC_START;
+  music.muted = true;
+
+  music.play().catch(() => null);
 
   window.setTimeout(() => {
-  showPerformance();
-}, 2000);
-
-  return playPromise;
+    showPerformance();
+  }, 2000);
 }
 
 function showPerformance() {
@@ -446,11 +447,12 @@ function showPerformance() {
   monkey.style.top = `${currentMonkeyY}vh`;
   monkey.style.transform = "translate(-50%,-50%)";
 
-  /* Asegurar reproducción al entrar a la escena. */
-  music.volume = 0.25;
-  music.play().catch(() => {
-    musicBadge.classList.add("hidden");
-  });
+ music.muted = false;
+music.volume = 0.25;
+
+music.play().catch(() => {
+  musicBadge.classList.add("hidden");
+});
 
   updateTimeDisplay();
   performanceClockId = requestAnimationFrame(performanceClock);
