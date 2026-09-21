@@ -1018,11 +1018,11 @@ function finishPerformance() {
 
   monkey.style.left = "50vw";
 
-  monkey.style.top =
-    window.innerWidth <= 650
-      ? "50vh"
-      : "72vh";
-
+    if (window.innerWidth <= 650) {
+    monkey.style.setProperty("top", "44vh", "important");
+  } else {
+    monkey.style.top = "72vh";
+  }
   armBouquet.classList.add("final-bouquet");
 
   window.setTimeout(() => {
