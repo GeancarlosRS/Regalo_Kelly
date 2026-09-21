@@ -213,8 +213,19 @@ function createGardenFlower(x, scale, delay = 0) {
   const flower = document.createElement("div");
 
   flower.className = "garden-flower";
-  flower.style.left = `calc(50% + ${x}px)`;
-  flower.style.setProperty("--scale", scale);
+
+  const isMobile = window.innerWidth <= 650;
+
+  const responsiveX = isMobile
+    ? x * 0.40
+    : x;
+
+  const responsiveScale = isMobile
+    ? scale * 0.82
+    : scale;
+
+  flower.style.left = `calc(50% + ${responsiveX}px)`;
+  flower.style.setProperty("--scale", responsiveScale);
   flower.style.animationDelay = `${delay}s`;
 
   flower.innerHTML = sunflowerSVG(`garden_${flowerId++}`);
