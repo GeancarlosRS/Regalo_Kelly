@@ -992,12 +992,6 @@ function finishPerformance() {
 
   cancelAnimationFrame(performanceClockId);
 
-  try {
-    music.pause();
-  } catch (error) {
-    console.warn(error);
-  }
-
   perfHud.classList.add("hidden");
   musicBadge.classList.add("hidden");
 
