@@ -1015,14 +1015,17 @@ function finishPerformance() {
     "top 1.15s cubic-bezier(.2,.75,.2,1)";
 
   monkey.style.left = "50vw";
-  monkey.style.top = "72vh";
 
-  armBouquet.classList.add("final-bouquet");
+monkey.style.top =
+  window.innerWidth <= 650
+    ? "58vh"
+    : "72vh";
+
+armBouquet.classList.add("final-bouquet");
 
   window.setTimeout(() => {
-    petalRain();
-    sparkleBurst();
-  }, 900);
+  showPerformance();
+}, 2000);
 
   window.setTimeout(() => {
     finalText.classList.add("show");
