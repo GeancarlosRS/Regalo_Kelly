@@ -922,9 +922,8 @@ button {
   }
 
   .monkey {
-    width: 195px;
-    height: 255px;
-    transform: translate(-50%, -72%) !important;
+  width: 195px;
+  height: 255px;
 }
 
   .arm-bouquet {
