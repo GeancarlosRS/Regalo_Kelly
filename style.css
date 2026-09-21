@@ -924,7 +924,8 @@ button {
   .monkey {
     width: 195px;
     height: 255px;
-  }
+    top: 49vh !important;
+}
 
   .arm-bouquet {
     width: 160px;
@@ -944,15 +945,4 @@ button {
   .final-text > p:last-child { font-size: 17px; }
 
   .perf-hud { width: min(300px, 88vw); }
-}
-/* =========================================
-   POSICIÓN DEL MONO EN CELULAR
-========================================= */
-
-@media (max-width: 650px) {
-
-    .monkey {
-        top: 57vh !important;
-    }
-
 }
