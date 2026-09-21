@@ -945,3 +945,14 @@ button {
 
   .perf-hud { width: min(300px, 88vw); }
 }
+/* =========================================
+   POSICIÓN DEL MONO EN CELULAR
+========================================= */
+
+@media (max-width: 650px) {
+
+    .monkey {
+        top: 57vh !important;
+    }
+
+}
