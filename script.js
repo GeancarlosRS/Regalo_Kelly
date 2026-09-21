@@ -1030,7 +1030,7 @@ function finishPerformance() {
   monkey.style.left = "50vw";
 
     if (window.innerWidth <= 650) {
-    monkey.style.setProperty("top", "44vh", "important");
+    monkey.style.setProperty("top", "57vh", "important");
   } else {
     monkey.style.top = "72vh";
   }
