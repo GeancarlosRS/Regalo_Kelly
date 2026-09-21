@@ -931,6 +931,26 @@ button {
   height: 255px;
 }
 
+     .sprout {
+    transform: translateX(-50%) scale(.72);
+    transform-origin: bottom center;
+  }
+
+  .plant {
+    transform: translateX(-50%) scale(.68);
+    transform-origin: bottom center;
+  }
+
+  .bud {
+    transform: translateX(-50%) scale(.68);
+    transform-origin: bottom center;
+  }
+
+  .garden-flower {
+    width: 125px;
+    height: 225px;
+  }
+   
   .arm-bouquet {
     width: 160px;
     height: 178px;
