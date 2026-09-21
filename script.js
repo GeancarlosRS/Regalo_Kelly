@@ -413,8 +413,8 @@ function startFinalScene() {
   const playPromise = music.play().catch(() => null);
 
   window.setTimeout(() => {
-    showPerformance();
-  }, 700);
+  showPerformance();
+}, 2000);
 
   return playPromise;
 }
@@ -1016,16 +1016,12 @@ function finishPerformance() {
 
   monkey.style.left = "50vw";
 
-monkey.style.top =
-  window.innerWidth <= 650
-    ? "58vh"
-    : "72vh";
+  monkey.style.top =
+    window.innerWidth <= 650
+      ? "50vh"
+      : "72vh";
 
-armBouquet.classList.add("final-bouquet");
-
-  window.setTimeout(() => {
-  showPerformance();
-}, 2000);
+  armBouquet.classList.add("final-bouquet");
 
   window.setTimeout(() => {
     finalText.classList.add("show");
